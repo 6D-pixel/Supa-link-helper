@@ -1,0 +1,17 @@
+{
+  "name": "supa-link-bot",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^22.13.17",
+    "bun-types": "^1.2.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "grammy": "^1.35.1"
+  }
+}
