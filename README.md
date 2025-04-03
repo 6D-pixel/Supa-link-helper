@@ -63,11 +63,3 @@ The bot includes comprehensive error handling for:
 ## Graceful Shutdown
 
 The bot implements graceful shutdown handling for SIGINT and SIGTERM signals.
-
-## Contributing
-
-Feel free to submit issues and enhancement requests!
-
-## License
-
-[Add your license here]
