@@ -36,7 +36,7 @@ A Telegram bot that provides quick access to various Supa Pump related tools and
 1. Clone the repository
 2. Install dependencies:
    ```bash
-   npm install
+   bun install
    ```
 3. Create a `.env` file in the root directory and add your Telegram bot token:
    ```
@@ -44,7 +44,8 @@ A Telegram bot that provides quick access to various Supa Pump related tools and
    ```
 4. Start the bot:
    ```bash
-   npm start
+   bun run build
+   bun run start:prod
    ```
 
 ## Environment Variables
