@@ -197,6 +197,17 @@ bot.catch((err) => {
 
 // --- Start the Bot ---
 console.log("Starting bot...");
+
+// Create a simple HTTP server to satisfy cloud provider requirements
+const server = Bun.serve({
+  port: 3000,
+  fetch(req) {
+    return new Response("Supa Link Bot is running!");
+  },
+});
+
+console.log(`HTTP server listening on port ${server.port}`);
+
 bot
   .start() // Start polling
   .then(() => {
@@ -210,9 +221,11 @@ bot
 // --- Graceful Shutdown ---
 process.once("SIGINT", () => {
   console.log("Stopping bot (SIGINT)...");
+  server.stop();
   bot.stop().then(() => console.log("Bot stopped."));
 });
 process.once("SIGTERM", () => {
   console.log("Stopping bot (SIGTERM)...");
+  server.stop();
   bot.stop().then(() => console.log("Bot stopped."));
 });
